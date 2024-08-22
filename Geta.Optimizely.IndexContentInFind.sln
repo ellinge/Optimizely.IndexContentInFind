@@ -1,16 +1,8 @@
-﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.11.35219.272
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Geta.Epi.IndexContentInFind", "src\Geta.Epi.IndexContentInFind.csproj", "{4CD0B3AA-DE51-43FD-880E-4AB0416EB64C}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "build", "build", "{8F66189F-39EA-49FD-8B8D-33B62B0B7206}"
-	ProjectSection(SolutionItems) = preProject
-		build\BuildEpiModule.proj = build\BuildEpiModule.proj
-		build\MSBuild.Community.Tasks.dll = build\MSBuild.Community.Tasks.dll
-		build\MSBuild.Community.Tasks.targets = build\MSBuild.Community.Tasks.targets
-	EndProjectSection
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Geta.Optimizely.IndexContentInFind", "src\Geta.Optimizely.IndexContentInFind.csproj", "{4CD0B3AA-DE51-43FD-880E-4AB0416EB64C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -25,5 +17,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {80626AEC-525C-4CFD-AA60-57322E4E991D}
 	EndGlobalSection
 EndGlobal

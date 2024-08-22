@@ -7,9 +7,9 @@ using EPiServer.Core;
 using EPiServer.Find.Cms;
 using EPiServer.ServiceLocation;
 
-namespace Geta.Epi.IndexContentInFind
+namespace Geta.Optimizely.IndexContentInFind
 {
-    [ServiceConfiguration(typeof(IIndexService), Lifecycle = ServiceInstanceScope.Hybrid)]
+    [ServiceConfiguration(typeof(IIndexService), Lifecycle = ServiceInstanceScope.Transient)]
     public class DefaultIndexService : IIndexService
     {
         protected readonly IContentLoader ContentLoader;

@@ -1,10 +1,10 @@
 ﻿using System;
 using System.Net;
-using System.Web.Mvc;
 using EPiServer.Core;
 using EPiServer.Shell.Services.Rest;
+using Microsoft.AspNetCore.Mvc;
 
-namespace Geta.Epi.IndexContentInFind.Rest
+namespace Geta.Optimizely.IndexContentInFind.Rest
 {
     [RestStore("indexcontentstore")]
     public class IndexContentStore : RestControllerBase
@@ -17,16 +17,16 @@ namespace Geta.Epi.IndexContentInFind.Rest
         }
 
         [HttpPost]
-        public virtual ActionResult Post(IndexInFindRequest data)
+        public virtual ActionResult Post([FromBody] IndexInFindRequest data)
         {
-            if (data == null || ContentReference.IsNullOrEmpty(data.ContentLink))
+            if (data == null || !ContentReference.TryParse(data.ContentLink, out ContentReference contentLink) || ContentReference.IsNullOrEmpty(contentLink))
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest, "ContentLink cannot be null.");
+                return StatusCode((int)HttpStatusCode.BadRequest, "ContentLink cannot be null.");
             }
 
             var indexingResults = data.IncludeDescendants
-                ? _indexService.IndexFrom(data.ContentLink, data.Force)
-                : _indexService.Index(data.ContentLink, data.Force);
+                ? _indexService.IndexFrom(contentLink, data.Force)
+                : _indexService.Index(contentLink, data.Force);
 
             return Rest(indexingResults);
         }
@@ -34,7 +34,7 @@ namespace Geta.Epi.IndexContentInFind.Rest
 
     public class IndexInFindRequest
     {
-        public ContentReference ContentLink { get; set; }
+        public string ContentLink { get; set; }
         public bool IncludeDescendants { get; set; }
         public bool Force { get; set; }
     }

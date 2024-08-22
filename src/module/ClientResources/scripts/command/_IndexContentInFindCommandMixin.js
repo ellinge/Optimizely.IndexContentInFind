@@ -6,7 +6,7 @@
         "epi/shell/command/_Command",
         "epi/shell/widget/dialog/Dialog",
         "epi/shell/TypeDescriptorManager",
-        "geta-epi-indexcontentinfind/widget/IndexContentInFindInfo"
+        "geta-optimizely-indexcontentinfind/widget/IndexContentInFindInfo"
 ],
     function (
         declare,
@@ -18,7 +18,7 @@
         TypeDescriptorManager,
         IndexContentInFindInfo
     ) {
-        return declare("geta-epi-indexcontentinfind/command/_IndexContentInFindCommandMixin", [_Command], {
+        return declare("geta-optimizely-indexcontentinfind/command/_IndexContentInFindCommandMixin", [_Command], {
             canExecute: true,
             includeDescendants: false,
             force: false,

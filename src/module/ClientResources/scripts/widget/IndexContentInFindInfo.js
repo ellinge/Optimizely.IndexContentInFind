@@ -4,7 +4,7 @@
     "dojo/_base/array",
     "dijit/layout/_LayoutWidget",
     "dijit/_TemplatedMixin",
-    "epi/i18n!epi/cms/nls/geta.epi.indexcontentinfind.indexcontentinfindinfo",
+    "epi/i18n!epi/cms/nls/geta.Optimizely.indexcontentinfind.indexcontentinfindinfo",
     "dojo/text!./templates/IndexContentInFindInfo.html"
 ],
     function (
@@ -16,7 +16,7 @@
         resources,
         template
     ) {
-        return declare("geta-epi-indexcontentinfind/widget/IndexContentInFindInfo", [_LayoutWidget, _TemplatedMixin], {
+        return declare("geta-optimizely-indexcontentinfind/widget/IndexContentInFindInfo", [_LayoutWidget, _TemplatedMixin], {
             name: "IndexContentInFindCommand",
             recursive: false,
             text: resources.text,

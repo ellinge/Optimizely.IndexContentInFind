@@ -4,14 +4,15 @@ using EPiServer.Framework;
 using EPiServer.Framework.Initialization;
 using EPiServer.Framework.Localization;
 using EPiServer.Framework.Localization.XmlResources;
+using Microsoft.Extensions.DependencyInjection;
 
-namespace Geta.Epi.IndexContentInFind
+namespace Geta.Optimizely.IndexContentInFind
 {
     [ModuleDependency(typeof(EPiServer.Web.InitializationModule))]
     [InitializableModule]
     public class IndexContentInFindInitialization : IInitializableModule
     {
-        private const string LocalizationProviderName = "Geta.Epi.IndexContentInFind.EmbeddedLangFiles";
+        private const string LocalizationProviderName = "Geta.Optimizely.IndexContentInFind.EmbeddedLangFiles";
         private static bool _initialized;
         private static readonly object _lock = new object();
 
@@ -24,7 +25,7 @@ namespace Geta.Epi.IndexContentInFind
                     return;
                 }
 
-                AddLocalizationProvider(context.Locate.Advanced.GetInstance<LocalizationService>());
+                AddLocalizationProvider(context.Locate.Advanced.GetService<LocalizationService>());
                 _initialized = true;
             }
         }

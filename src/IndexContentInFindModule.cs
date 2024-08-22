@@ -1,8 +1,8 @@
-﻿using System.Web.Hosting;
-using EPiServer.Framework.TypeScanner;
+﻿using EPiServer.Framework.TypeScanner;
 using EPiServer.Shell.Modules;
+using Microsoft.Extensions.FileProviders;
 
-namespace Geta.Epi.IndexContentInFind
+namespace Geta.Optimizely.IndexContentInFind
 {
     public class IndexContentInFindModule : ShellModule
     {
@@ -10,7 +10,7 @@ namespace Geta.Epi.IndexContentInFind
         {
         }
 
-        public IndexContentInFindModule(string name, string routeBasePath, string resourceBasePath, ITypeScannerLookup typeScannerLookup, VirtualPathProvider virtualPathProvider) : base(name, routeBasePath, resourceBasePath, typeScannerLookup, virtualPathProvider)
+        public IndexContentInFindModule(string name, string routeBasePath, string resourceBasePath, ITypeScannerLookup typeScannerLookup, IFileProvider virtualPathProvider) : base(name, routeBasePath, resourceBasePath, typeScannerLookup, virtualPathProvider)
         {
         }
     }

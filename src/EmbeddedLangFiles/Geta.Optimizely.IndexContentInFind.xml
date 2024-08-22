@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<languages>
+	<language name="English" id="en">
+		<geta>
+			<optimizely>
+				<indexcontentinfind>
+					<indexcontentinfindcommand>
+						<label>Index in Find</label>
+						<tooltip>Indexes only this content</tooltip>
+					</indexcontentinfindcommand>
+					<indexcontentinfindforcecommand>
+						<label>Index in Find (ignore conventions)</label>
+						<tooltip>Indexes only this content. Ignores conventions.</tooltip>
+					</indexcontentinfindforcecommand>
+					<indexcontentinfinddescendantscommand>
+						<label>Index in Find (include descendants)</label>
+						<tooltip>Indexes this content and all of it's descendants in Find</tooltip>
+					</indexcontentinfinddescendantscommand>
+					<indexcontentinfinddescendantsforcecommand>
+						<label>Index in Find (include descendants &amp; ignore conventions)</label>
+						<tooltip>Indexes this content and all of it's descendants in Find. Ignores conventions.</tooltip>
+					</indexcontentinfinddescendantsforcecommand>
+					<indexcontentinfindinfo>
+						<text>
+							<![CDATA[
+                            Indexing current content. <br>
+                            You can safely close this dialog and let the work continue quietly in the background.
+                            ]]>
+						</text>
+						<recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+						<resulttext>
+							<![CDATA[
+                        Indexing done.<br><br>
+                        Successful: {0}<br>
+                        Excluded by conventions: {1}<br>
+                        Failed: {2}
+                        ]]>
+						</resulttext>
+					</indexcontentinfindinfo>
+				</indexcontentinfind>
+			</optimizely>
+		</geta>
+	</language>
+	<language name="Swedish" id="sv">
+		<geta>
+			<optimizely>
+				<indexcontentinfind>
+					<indexcontentinfindcommand>
+						<label>Indexera i Find</label>
+						<tooltip>Indexerar endast detta innehåll</tooltip>
+					</indexcontentinfindcommand>
+					<indexcontentinfindforcecommand>
+						<label>Indexera i Find (ignorera konventioner)</label>
+						<tooltip>Indexerar endast detta innehåll. Ignorerar konventioner.</tooltip>
+					</indexcontentinfindforcecommand>
+					<indexcontentinfinddescendantscommand>
+						<label>Indexera i Find (inkludera ättlingar)</label>
+						<tooltip>Indexerar detta innehåll och alla ättlingar</tooltip>
+					</indexcontentinfinddescendantscommand>
+					<indexcontentinfinddescendantsforcecommand>
+						<label>Indexera i Find (inkludera ättlingar, ignorera konventioner)</label>
+						<tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerar konventioner.</tooltip>
+					</indexcontentinfinddescendantsforcecommand>
+					<indexcontentinfindinfo>
+						<text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
+						<recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+						<resulttext>
+							<![CDATA[
+                        Indexering klar.<br><br>
+                        Antal indexerade: {0}<br>
+                        Antal ignorerade pga konventioner: {1}<br>
+                        Antal misslyckade: {2}
+                        ]]>
+						</resulttext>
+					</indexcontentinfindinfo>
+				</indexcontentinfind>
+			</optimizely>
+		</geta>
+	</language>
+	<language name="Norwegian" id="no">
+		<geta>
+			<optimizely>
+				<indexcontentinfind>
+					<indexcontentinfindcommand>
+						<label>Indeksere i Find</label>
+						<tooltip>Indeksere kun dette innhold</tooltip>
+					</indexcontentinfindcommand>
+					<indexcontentinfindforcecommand>
+						<label>Indeksere i Find (ignorere konvensjoner)</label>
+						<tooltip>Indeksere kun dette innhold. Ignorerer konvensjoner.</tooltip>
+					</indexcontentinfindforcecommand>
+					<indexcontentinfinddescendantscommand>
+						<label>Indeksere i Find (inkludere descendants)</label>
+						<tooltip>Indeksere dette og all avledet innhold</tooltip>
+					</indexcontentinfinddescendantscommand>
+					<indexcontentinfinddescendantsforcecommand>
+						<label>Indeksere i Find (inkludere descendants, ignorere konvensjoner)</label>
+						<tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerer konvensjoner.</tooltip>
+					</indexcontentinfinddescendantsforcecommand>
+					<indexcontentinfindinfo>
+						<text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
+						<recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
+						<resulttext>
+							<![CDATA[
+                        Indeksering ferdig.<br><br>
+                        Antall indeksert: {0}<br>
+                        Antall ignorert på grunn av konvensjoner: {1}<br>
+                        Antall mislyktes: {2}
+                        ]]>
+						</resulttext>
+					</indexcontentinfindinfo>
+				</indexcontentinfind>
+			</optimizely>
+		</geta>
+	</language>
+</languages>

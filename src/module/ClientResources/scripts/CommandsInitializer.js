@@ -4,7 +4,7 @@
     "epi/_Module",
     "epi/dependency",
     "epi/routes",
-    "geta-epi-indexcontentinfind/command/ToolsMenuCommandProvider"
+    "geta-optimizely-indexcontentinfind/command/ToolsMenuCommandProvider"
 ], function (
     dojo,
     declare,
@@ -13,7 +13,7 @@
     routes,
     ToolsMenuCommandProvider
 ) {
-    return declare("geta-epi-indexcontentinfind/CommandsInitializer", [_Module], {
+    return declare("geta-optimizely-indexcontentinfind/CommandsInitializer", [_Module], {
         initialize: function () {
             this.inherited(arguments);
             var commandregistry = dependency.resolve("epi.globalcommandregistry");
@@ -24,8 +24,8 @@
             storeRegistry.create("indexcontentstore", this._getRestPath("indexcontentstore"));
         },
 
-        _getRestPath: function (storeName) {
-            return routes.getRestPath({ moduleArea: "geta-epi-indexcontentinfind", storeName: storeName });
+        _getRestPath: function (name) {
+            return routes.getRestPath({ moduleArea: "Geta.Optimizely.IndexContentInFind", storeName: name });
         }
     });
 });

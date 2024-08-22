@@ -2,10 +2,10 @@
     "dojo",
     "dojo/_base/declare",
     "epi/shell/command/_CommandProviderMixin",
-    "geta-epi-indexcontentinfind/command/IndexContentInFindCommand",
-    "geta-epi-indexcontentinfind/command/IndexContentInFindDescendantsCommand",
-    "geta-epi-indexcontentinfind/command/IndexContentInFindForceCommand",
-    "geta-epi-indexcontentinfind/command/IndexContentInFindDescendantsForceCommand"
+    "geta-optimizely-indexcontentinfind/command/IndexContentInFindCommand",
+    "geta-optimizely-indexcontentinfind/command/IndexContentInFindDescendantsCommand",
+    "geta-optimizely-indexcontentinfind/command/IndexContentInFindForceCommand",
+    "geta-optimizely-indexcontentinfind/command/IndexContentInFindDescendantsForceCommand"
 ],
 function (
     dojo,
@@ -16,7 +16,7 @@ function (
     IndexContentInFindForceCommand,
     IndexContentInFindDescendantsForceCommand
 ) {
-    return declare("geta-epi-indexcontentinfind/command/ToolsMenuCommandProvider", [_CommandProviderMixin], {
+    return declare("geta-optimizely-indexcontentinfind/command/ToolsMenuCommandProvider", [_CommandProviderMixin], {
 
         constructor: function () {
             this.inherited(arguments);

@@ -1,0 +1,36 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+	<PropertyGroup>
+		<OutputType>Library</OutputType>
+		<IsPackable>true</IsPackable>
+		<PackageId>Geta.Optimizely.IndexContentInFind</PackageId>
+		<Title>Geta.Optimizely.IndexContentInFind</Title>
+		<Authors>Geta</Authors>
+		<Company>Geta</Company>
+		<PackageProjectUrl>https://github.com/Geta/geta-optimizely-indexcontentinfind</PackageProjectUrl>
+		<PackageIconUrl>https://cdn.geta.no/opensource/icons/Geta-logo-3.png</PackageIconUrl>
+		<PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+		<Description>Tool to index content items in Episerver Find. Makes it possible to index a single content item or an item including it's descendents.</Description>
+		<PackageReleaseNotes>https://github.com/Geta/geta-optimizely-indexcontentinfind/blob/master/CHANGELOG.md</PackageReleaseNotes>
+		<PackageTags>Geta Optimizely Find</PackageTags>
+		<RepositoryUrl>https://github.com/Geta/geta-optimizely-indexcontentinfind</RepositoryUrl>
+	</PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net6.0</TargetFramework>
+		<GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+		<OutputPath>bin\</OutputPath>
+	</PropertyGroup>
+	<ItemGroup>
+		<EmbeddedResource Include="EmbeddedLangFiles\**" />
+	</ItemGroup>
+	<ItemGroup>
+	  <Content Remove="module\module.config" />
+	</ItemGroup>
+	<ItemGroup>
+		<None Include="module\module.config" />
+		<None Include="msbuild\Main.proj" />
+	</ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="EPiServer.Find.Cms" Version="14.0.2" />
+	</ItemGroup>
+	<Import Project="msbuild\Main.proj" />
+</Project>
