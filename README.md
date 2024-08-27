@@ -13,3 +13,17 @@ For the IndexContentInFind to work, you have to call `AddIndexContentInFind` ext
 ```cs
 services.AddIndexContentInFind();
 ```
+or add it through the appsettings.json
+```json
+{
+  "EPiServer": {
+    "CmsUI": {
+      "ProtectedModule": {
+        "Items": [
+          { "Name": "Geta.Optimizely.IndexContentInFind" }
+        ]
+      }
+    }
+  }
+}
+```
