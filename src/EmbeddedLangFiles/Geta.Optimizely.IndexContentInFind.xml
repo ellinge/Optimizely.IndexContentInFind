@@ -44,7 +44,7 @@
                         Failed: {2}
                         ]]>
 						</resulttext>
-						<removaltext>Removing content from Find..</removaltext>
+						<removaltext>Removing content from Find.</removaltext>
 						<removalsuccess>Removal successful.</removalsuccess>
 						<removalfail>Removal failed.</removalfail>
 					</indexcontentinfindinfo>
@@ -94,7 +94,7 @@
                         Antal misslyckade: {2}
                         ]]>
 						</resulttext>
-						<removaltext>Tar bort innehåll från Find..</removaltext>
+						<removaltext>Tar bort innehåll från Find.</removaltext>
 						<removalsuccess>Borttagning lyckades.</removalsuccess>
 						<removalfail>Borttagning misslyckades.</removalfail>
 					</indexcontentinfindinfo>
@@ -141,7 +141,7 @@
                         Antall mislyktes: {2}
                         ]]>
 						</resulttext>
-						<removaltext>Fjerner innhold fra Find..</removaltext>
+						<removaltext>Fjerner innhold fra Find.</removaltext>
 						<removalsuccess>Fjerningen lyktes.</removalsuccess>
 						<removalfail>Fjerningen mislyktes.</removalfail>
 					</indexcontentinfindinfo>
