@@ -23,14 +23,15 @@
             includeDescendants: false,
             force: false,
             resources: null,
-
+            removeFromIndex: false,
             _execute: function () {
                 var storeRegistry = dependency.resolve("epi.storeregistry");
                 var store = storeRegistry.get("indexcontentstore");
                 var contentData = this.model.contentData;
 
                 var dialogContent = new IndexContentInFindInfo({
-                    recursive: this.includeDescendants
+                    recursive: this.includeDescendants,
+                    removeFromIndex: this.removeFromIndex
                 });
 
                 dialogContent.startup();
@@ -55,12 +56,14 @@
                 store.put({
                     'contentLink': contentData.contentLink,
                     'includeDescendants': this.includeDescendants,
-                    'force': this.force
+                    'force': this.force,
+                    'removeFromIndex': this.removeFromIndex
                 }).then(lang.hitch(this, function (response) {
                     dialog.hide();
 
                     dialogContent = new IndexContentInFindInfo({
-                        recursive: this.includeDescendants
+                        recursive: this.includeDescendants,
+                        removeFromIndex: this.removeFromIndex
                     });
 
                     dialogContent.startup();
@@ -72,7 +75,7 @@
                         destroyOnHide: true,
                         dialogClass: "epi-dialog-indexContentInFind",
                         title: this.resources.label,
-                        content: dialogContent
+                        content: dialogContent 
                     });
 
                     dialog.definitionConsumer.add({

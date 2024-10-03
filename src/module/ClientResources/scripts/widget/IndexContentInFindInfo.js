@@ -22,39 +22,51 @@
             text: resources.text,
             textNode: null,
             templateString: template,
-
+            removeFromIndex: false,
             postCreate: function () {
                 this.inherited(arguments);
 
-                if (this.recursive) {
+                if (this.removeFromIndex) {
+                    this.set('text', resources.removaltext);
+                } else if (this.recursive) {
                     this.set('text', resources.recursivetext);
                 }
             },
 
-            showResult: function (indexingResult) {
-                var successfulCount = 0,
-                    excludedCount = 0,
-                    errorCount = 0;
+            showResult: function (indexingResul) {
+                
 
-                array.forEach(indexingResult, function (item) {
-                    if (item.ok) {
-                        successfulCount++;
-                    }
-                    else if (item.excludedByConventions === false) {
-                        errorCount++;
+                if (removeFromIndex) {
+                    if (indexingResult.ok) {
+                        this.set('text', resources.removalsuccess)
+                    } else {
+                        this.set('text', resources.removalfail)
                     }
 
-                    if (item.excludedByConventions) {
-                        excludedCount++;
-                    }
-                }, this);
+                } else {
+                    var successfulCount = 0,
+                        excludedCount = 0,
+                        errorCount = 0;
+                    array.forEach(indexingResult, function (item) {
+                        if (item.ok) {
+                            successfulCount++;
+                        }
+                        else if (item.excludedByConventions === false) {
+                            errorCount++;
+                        }
 
-                var resultText = resources.resulttext;
-                resultText = resultText.replace('{0}', successfulCount);
-                resultText = resultText.replace('{1}', excludedCount);
-                resultText = resultText.replace('{2}', errorCount);
+                        if (item.excludedByConventions) {
+                            excludedCount++;
+                        }
+                    }, this);
 
-                this.set('text', resultText);
+                    var resultText = resources.resulttext;
+                    resultText = resultText.replace('{0}', successfulCount);
+                    resultText = resultText.replace('{1}', excludedCount);
+                    resultText = resultText.replace('{2}', errorCount);
+
+                    this.set('text', resultText);
+                }
             },
 
             _setTextAttr: function(text) {

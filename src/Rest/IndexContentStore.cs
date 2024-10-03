@@ -24,6 +24,12 @@ namespace Geta.Optimizely.IndexContentInFind.Rest
                 return StatusCode((int)HttpStatusCode.BadRequest, "ContentLink cannot be null.");
             }
 
+            if(data.RemoveFromIndex)
+            {
+                var result = _indexService.RemoveFromIndex(contentLink, data.IncludeDescendants);
+                return Rest(result);
+            }
+
             var indexingResults = data.IncludeDescendants
                 ? _indexService.IndexFrom(contentLink, data.Force)
                 : _indexService.Index(contentLink, data.Force);
@@ -37,5 +43,6 @@ namespace Geta.Optimizely.IndexContentInFind.Rest
         public string ContentLink { get; set; }
         public bool IncludeDescendants { get; set; }
         public bool Force { get; set; }
+        public bool RemoveFromIndex { get; set; }
     }
 }

@@ -14,12 +14,20 @@
 					</indexcontentinfindforcecommand>
 					<indexcontentinfinddescendantscommand>
 						<label>Index in Find (include descendants)</label>
-						<tooltip>Indexes this content and all of it's descendants in Find</tooltip>
+						<tooltip>Indexes this content and all of its descendants in Find</tooltip>
 					</indexcontentinfinddescendantscommand>
 					<indexcontentinfinddescendantsforcecommand>
 						<label>Index in Find (include descendants &amp; ignore conventions)</label>
-						<tooltip>Indexes this content and all of it's descendants in Find. Ignores conventions.</tooltip>
+						<tooltip>Indexes this content and all of its descendants in Find. Ignores conventions.</tooltip>
 					</indexcontentinfinddescendantsforcecommand>
+					<removecontentfromfindcommand>
+						<label>Remove from Find</label>
+						<tooltip>Removes only this content from the index.</tooltip>
+					</removecontentfromfindcommand>
+					<removecontentfromfinddescendantscommand>
+						<label>Remove from Find (include descendants)</label>
+						<tooltip>Removes this content and all its descendants from the index.</tooltip>
+					</removecontentfromfinddescendantscommand>
 					<indexcontentinfindinfo>
 						<text>
 							<![CDATA[
@@ -36,6 +44,9 @@
                         Failed: {2}
                         ]]>
 						</resulttext>
+						<removaltext>Removing content from Find..</removaltext>
+						<removalsuccess>Removal successful.</removalsuccess>
+						<removalfail>Removal failed.</removalfail>
 					</indexcontentinfindinfo>
 				</indexcontentinfind>
 			</optimizely>
@@ -61,6 +72,17 @@
 						<label>Indexera i Find (inkludera ättlingar, ignorera konventioner)</label>
 						<tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerar konventioner.</tooltip>
 					</indexcontentinfinddescendantsforcecommand>
+					<removecontentfromfindcommand>
+						<label>Ta bort från Find</label>
+						<tooltip>Tar bort endast detta innehåll från indexet.</tooltip>
+					</removecontentfromfindcommand>
+					<removecontentfromfinddescendantscommand>
+						<label>Ta bort från Find (inkludera ättlingar)</label>
+						<tooltip>Tar bort detta innehåll och alla dess ättlingar från indexet.</tooltip>
+						<removaltext></removaltext>
+						<removalsuccess></removalsuccess>
+						<removalfail></removalfail>
+					</removecontentfromfinddescendantscommand>
 					<indexcontentinfindinfo>
 						<text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
 						<recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
@@ -72,6 +94,9 @@
                         Antal misslyckade: {2}
                         ]]>
 						</resulttext>
+						<removaltext>Tar bort innehåll från Find..</removaltext>
+						<removalsuccess>Borttagning lyckades.</removalsuccess>
+						<removalfail>Borttagning misslyckades.</removalfail>
 					</indexcontentinfindinfo>
 				</indexcontentinfind>
 			</optimizely>
@@ -97,6 +122,14 @@
 						<label>Indeksere i Find (inkludere descendants, ignorere konvensjoner)</label>
 						<tooltip>Indexerar detta innehåll och alla ättlingar. Ignorerer konvensjoner.</tooltip>
 					</indexcontentinfinddescendantsforcecommand>
+					<removecontentfromfindcommand>
+						<label>Fjern fra Find</label>
+						<tooltip>Fjerner bare dette innholdet fra indeksen.</tooltip>
+					</removecontentfromfindcommand>
+					<removecontentfromfinddescendantscommand>
+						<label>Fjern fra Find (inkludere descendants)</label>
+						<tooltip>Fjerner dette innholdet og alle dets etterkommere fra indeksen.</tooltip>
+					</removecontentfromfinddescendantscommand>
 					<indexcontentinfindinfo>
 						<text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
 						<recursivetext>Indexing current content and all of it's descendents. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</recursivetext>
@@ -108,6 +141,9 @@
                         Antall mislyktes: {2}
                         ]]>
 						</resulttext>
+						<removaltext>Fjerner innhold fra Find..</removaltext>
+						<removalsuccess>Fjerningen lyktes.</removalsuccess>
+						<removalfail>Fjerningen mislyktes.</removalfail>
 					</indexcontentinfindinfo>
 				</indexcontentinfind>
 			</optimizely>
