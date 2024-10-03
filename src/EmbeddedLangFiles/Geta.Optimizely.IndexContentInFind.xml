@@ -79,9 +79,6 @@
 					<removecontentfromfinddescendantscommand>
 						<label>Ta bort från Find (inkludera ättlingar)</label>
 						<tooltip>Tar bort detta innehåll och alla dess ättlingar från indexet.</tooltip>
-						<removaltext></removaltext>
-						<removalsuccess></removalsuccess>
-						<removalfail></removalfail>
 					</removecontentfromfinddescendantscommand>
 					<indexcontentinfindinfo>
 						<text>Indexing current content. &lt;br&gt;You can safely close this dialog and let the work continue quietly in the background.</text>
