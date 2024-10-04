@@ -33,7 +33,7 @@
                 }
             },
 
-            showResult: function (indexingResul) {
+            showResult: function (indexingResult) {
                 
 
                 if (removeFromIndex) {
