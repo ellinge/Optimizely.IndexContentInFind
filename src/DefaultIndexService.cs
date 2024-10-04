@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using EPiServer;
+using EPiServer.Cms.Shell;
 using EPiServer.Core;
+using EPiServer.Find.Api;
 using EPiServer.Find.Cms;
 using EPiServer.ServiceLocation;
 
@@ -39,6 +41,12 @@ namespace Geta.Optimizely.IndexContentInFind
             contentsToIndex.Insert(0, mainContent);
 
             return ContentIndexer.Index(contentsToIndex, GetIndexOptions(ignoreConventions));
+        }
+
+        public virtual DeleteByQueryResult RemoveFromIndex(ContentReference contentLink, bool cascade)
+        {
+            var mainContent = ContentLoader.Get<IContent>(contentLink);
+            return ContentIndexer.RemoveFromIndex(contentLink, cascade, mainContent.LanguageBranch());
         }
 
         protected virtual IndexOptions GetIndexOptions(bool ignoreConventions)

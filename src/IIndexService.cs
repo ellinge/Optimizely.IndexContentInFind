@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using EPiServer.Core;
+using EPiServer.Find.Api;
 using EPiServer.Find.Cms;
 
 namespace Geta.Optimizely.IndexContentInFind
@@ -9,5 +10,7 @@ namespace Geta.Optimizely.IndexContentInFind
         IEnumerable<ContentIndexingResult> Index(ContentReference contentLink, bool ignoreConventions);
 
         IEnumerable<ContentIndexingResult> IndexFrom(ContentReference contentLink, bool ignoreConventions);
+
+        DeleteByQueryResult RemoveFromIndex(ContentReference contentLink, bool cascade);
     }
 }
