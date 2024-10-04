@@ -34,7 +34,7 @@
             },
 
             showResult: function (indexingResult) {
-                if (removeFromIndex) {
+                if (this.removeFromIndex) {
                     if (indexingResult.ok) {
                         this.set('text', resources.removalsuccess)
                     } else {
