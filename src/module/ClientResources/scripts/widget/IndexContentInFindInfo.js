@@ -34,15 +34,12 @@
             },
 
             showResult: function (indexingResult) {
-                
-
                 if (removeFromIndex) {
                     if (indexingResult.ok) {
                         this.set('text', resources.removalsuccess)
                     } else {
                         this.set('text', resources.removalfail)
                     }
-
                 } else {
                     var successfulCount = 0,
                         excludedCount = 0,
@@ -69,7 +66,7 @@
                 }
             },
 
-            _setTextAttr: function(text) {
+            _setTextAttr: function (text) {
                 this.textNode.innerHTML = text;
             }
         });
